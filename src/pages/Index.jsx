@@ -1,19 +1,32 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Box, Container, Flex, Text, VStack } from "@chakra-ui/react";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
-      </VStack>
-    </Container>
+    <Flex direction="column" minHeight="100vh">
+      {/* Navigation Bar */}
+      <Box as="nav" bg="blue.500" color="white" py={4}>
+        <Container maxW="container.md">
+          <Text fontSize="xl" fontWeight="bold">My Website</Text>
+        </Container>
+      </Box>
+
+      {/* Main Content Area */}
+      <Flex as="main" flex="1" py={8} bg="gray.50">
+        <Container maxW="container.md" centerContent>
+          <VStack spacing={4}>
+            <Text fontSize="2xl">Welcome to My Website</Text>
+            <Text>This is a simple, responsive layout using Chakra UI.</Text>
+          </VStack>
+        </Container>
+      </Flex>
+
+      {/* Footer */}
+      <Box as="footer" bg="blue.500" color="white" py={4}>
+        <Container maxW="container.md">
+          <Text textAlign="center">&copy; 2023 My Website. All rights reserved.</Text>
+        </Container>
+      </Box>
+    </Flex>
   );
 };
 
